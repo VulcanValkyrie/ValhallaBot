@@ -15,7 +15,7 @@ tail -f .botfile | openssl s_client -connect irc.cat.pdx.edu:6697 |while true; d
    if [[ -z $started ]] ; then
         send "NICK ValhallaBot"  #append nick to botfile
         send "USER ValhallaBot ValhallaBot ValhallaBot :Valkyrie" 
-        send "JOIN #robots catsonly "
+        send "JOIN #robots ,<insert chankey>"
         started="yes"
    fi 
    read irc 
